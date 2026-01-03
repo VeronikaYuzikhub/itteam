@@ -1,0 +1,149 @@
+
+    $primary-text-color: #757575;
+    $title-text-color: #212121;
+    $accent-text-color:  #2196F3;
+    $primary-white-color: #FFFFFF;
+    $secondary-white-color: rgba(255, 255, 255, 0.6);
+    $tertiary-white-color: #F5F4FA;
+    $b-background-color: #2F303A;
+    $logo-text-color: #000000;
+    $border-bottom-color: #ECECEC;
+    $logo-icons-color: #AFB1B8;
+    $border-card-color: #EEEEEE;
+
+body {
+    background-color: $primary-white-color;
+    color: $primary-text-color;
+
+    font-family: Roboto, sans-serif;
+    letter-spacing: .03em;
+}
+
+.container {
+    width: 1230px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+    /*Header*/
+
+.header {
+    border-bottom: 1px solid $border-bottom-color;
+}
+
+.logo {
+    margin-right: 93px;
+
+    font-family: Raleway, cursive;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 1.17;
+    text-decoration: none;
+
+    & link {
+        color: $accent-text-color;
+    }
+    
+}
+
+.logo-header-link {
+    color: $logo-text-color;
+}
+
+
+ul {
+    list-style: none;
+}
+
+.site-nav {
+    display: flex;
+    align-items: center;
+}
+
+.site-nav_item , .auth-nav{
+    display: flex;
+
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding-left: 0px;
+    .link {
+
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 1.17;
+        letter-spacing: .02em;
+        text-decoration: none;
+        color: $title-text-color;
+        transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
+}
+
+.site-nav_item .item + .item {
+    margin-left: 50px;
+}
+
+.site-nav_item .link:hover , 
+.site-nav_item .link:focus {
+    color: $accent-text-color;
+}
+
+
+/*Нижнє підкреслення під час активації сторінки*/
+.site-nav_item .link {
+    position: relative;
+    display: block;
+    padding-top: 32px;
+    padding-bottom: 32px;
+
+    &.active {
+        color: $accent-text-color;
+
+        &::after {
+            content: "";
+            display: block;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            background-color: $accent-text-color;
+            border-radius: 2px;
+            width: 100%;
+            height: 4px;
+        }
+    }
+}
+
+
+.auth-nav {
+    margin-left: auto;
+    .item-icon + .item-icon {
+        margin-left: 30px;
+    }
+    .link{
+        color: $primary-text-color;
+    }
+}
+
+.item-icon .link::before {
+    display: inline-block;
+    content: "";
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: contain;
+}
+
+.item-icon .icon {
+    margin-right: 10px;
+    vertical-align: middle;
+    cursor: pointer;
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.hover-effect:hover .icon , .hover-effect:focus .icon {
+    fill: $accent-text-color;
+}
+
+.hover-effect:hover .link , .hover-effect:focus .link {
+    color: $accent-text-color;
+}

@@ -1,0 +1,68 @@
+.section-title {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
+.section-item {
+    display: flex;
+    flex-direction: row;
+
+    margin: 0px;
+    padding: 0px;
+}
+
+$itemFlexBasis: 90;
+
+.section-item .item {
+    flex-basis: calc((100% - #{$itemFlexBasis}) / 4);
+    margin-right: 30px;
+
+    &:nth-child(4n) {
+        margin-right: 0px;
+    }
+
+    &::before {
+        display: block;
+        content: "";
+        height: 120px;
+        width: 270px;
+        
+        background-repeat: no-repeat;
+        background-position: center;
+        background-color: $tertiary-white-color;
+        margin-bottom: 30px;
+        border-radius: 4px;
+    }
+}
+
+@each $index, $svgobject in  (1, antenna),(2, clock),(3, diagram),(4, astronaut) {
+    .item:nth-child(#{$index})::before {
+        background-image: url('../images/#{$svgobject}.svg');
+    } 
+}
+
+
+.section-subtitle {
+
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.17;
+    margin-top: 0px;
+    margin-bottom: 10px;
+}
+
+.section-desc {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.71;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}

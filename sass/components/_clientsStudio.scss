@@ -1,0 +1,22 @@
+.logo-item {
+    border: 1px solid $logo-icons-color;
+    border-radius: 4px;
+    padding: 16px 32px;
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover , &:focus {
+        border-color: $accent-text-color;
+    }
+
+    &:hover .icon , &:focus .icon {
+        fill: $accent-text-color;
+    }
+}
+
+.logo-item .icon {
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.section-item .logo-item + .logo-item {
+    margin-left: 30px;
+}

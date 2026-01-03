@@ -1,0 +1,327 @@
+@charset "UTF-8";
+body {
+  background-color: #FFFFFF;
+  color: #757575;
+  font-family: Roboto, sans-serif;
+  letter-spacing: 0.03em;
+}
+
+.container {
+  width: 1230px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/*Header*/
+.header {
+    border-bottom: 1px solid #ECECEC;
+  }
+  
+  .logo {
+    margin-right: 93px;
+    font-family: Raleway, cursive;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 1.17;
+    text-decoration: none;
+    color: #2196F3;
+  }
+  .logo link {
+    color: #2196F3;
+  }
+  
+  .logo-header-link {
+    color: #000000;
+  }
+  
+  ul {
+    list-style: none;
+  }
+  
+  .site-nav {
+    display: flex;
+    align-items: center;
+  }
+  
+  .site-nav_item, .auth-nav {
+    display: flex;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding-left: 0px;
+  }
+  .site-nav_item .link, .auth-nav .link {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.17;
+    letter-spacing: 0.02em;
+    text-decoration: none;
+    color: #212121;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .site-nav_item .item + .item {
+    margin-left: 50px;
+  }
+  
+  .site-nav_item .link:hover,
+  .site-nav_item .link:focus {
+    color: #2196F3;
+  }
+  
+  /*Нижнє підкреслення під час активації сторінки*/
+  .site-nav_item .link {
+    position: relative;
+    display: block;
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
+  .site-nav_item .link.active {
+    color: #2196F3;
+  }
+  .site-nav_item .link.active::after {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: #2196F3;
+    border-radius: 2px;
+    width: 100%;
+    height: 4px;
+  }
+  
+  .auth-nav {
+    margin-left: auto;
+  }
+  .auth-nav .item-icon + .item-icon {
+    margin-left: 30px;
+  }
+  .auth-nav .link {
+    color: #757575;
+  }
+  
+  .item-icon .link::before {
+    display: inline-block;
+    content: "";
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: contain;
+  }
+  
+  .item-icon .icon {
+    margin-right: 10px;
+    vertical-align: middle;
+    cursor: pointer;
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .hover-effect:hover .icon, .hover-effect:focus .icon {
+    fill: #2196F3;
+  }
+  
+  .hover-effect:hover .link, .hover-effect:focus .link {
+    color: #2196F3;
+  }  
+
+/*Table*/
+  .section {
+    padding-top: 94px;
+    padding-bottom: 94px;
+    margin-right: 0px;
+    margin-left: 0px;
+    background-color: #F5F4FA;
+  }
+
+  .section-title {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+  }
+
+  .table {
+    font-family: Raleway, cursive;
+    font-weight: 600;
+    font-size: 17px;
+    line-height: 1.17;
+    letter-spacing: 0.02em;
+    border: 1px;
+    margin: 0 auto;
+  }
+
+  .tabborcolor {
+    color:#2F303A;
+  }
+
+  .intervals {
+    padding: 5px 10px;
+  }
+
+/*Footer*/
+  .footer {
+    background-color: #2F303A;
+  }
+  
+  .container-footer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: #2F303A;
+  }
+  
+  .container-no-padding {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+  
+  .logotype {
+    display: inline-block;
+    margin-top: 0px;
+    margin-bottom: 28px;
+    font-family: Raleway, cursive;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 1.17;
+    text-decoration: none;
+  }
+  
+  .logotype link {
+    color: #2196F3;
+  }
+  
+  .logotype-header-link {
+    color: #FFFFFF;
+  }
+  
+  .address {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.7;
+    font-style: normal;
+  }
+  
+  .address-title {
+    color: #FFFFFF;
+  }
+  
+  .address-subtitle {
+    color: rgba(255, 255, 255, 0.6);
+  }
+  
+  .footer-list {
+    padding-top: 72px;
+    padding-bottom: 100px;
+  }
+  
+  .footer-title {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.17;
+    color: #FFFFFF;
+    text-align: left;
+    margin-top: 0px;
+    margin-bottom: 20px;
+  }
+  
+  .footer-icon {
+    display: flex;
+    align-items: center;
+    padding: 0px;
+    margin: 0px;
+  }
+  
+  .footer-icon .icons {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .footer-icon .icons:hover, .footer-icon .icons:focus {
+    background-color: #2196F3;
+  }
+  
+  .footer-icon .icons + .icons {
+    margin-left: 10px;
+  }
+  
+  .footer-icon .icons .icon-logo {
+    fill: #FFFFFF;
+  }
+  
+  .footer-icon .icons {
+    background-color: #757575;
+  }
+  
+  .container-footer > .container-no-padding + .footer-list {
+    margin-left: 70px;
+  }
+  
+  .container-footer > .footer-list + .form {
+    margin-left: 93px;
+  }
+  
+  .form {
+    padding-top: 72px;
+    padding-bottom: 94px;
+  }
+  
+  .form-content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  
+  .form-content input {
+    width: 358px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 4px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+    background-color: #2F303A;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 16px;
+    color: rgba(255, 255, 255, 0.6);
+  }
+  .form-content input::-moz-placeholder {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.25;
+    color: rgba(255, 255, 255, 0.6);
+  }
+  .form-content input::placeholder {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.25;
+    color: rgba(255, 255, 255, 0.6);
+  }
+  
+  .form .btn {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    color: #FFFFFF;
+    background-color: #2196F3;
+    border: none;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.87;
+    padding: 10px 28px;
+    min-width: 200px;
+    margin-left: 12px;
+    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .icon-form {
+    margin-left: 10px;
+  }/*# sourceMappingURL=extra.css.map */
